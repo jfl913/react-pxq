@@ -70,7 +70,7 @@ class Home extends Component {
   }
 
   // 提交表单
-  sumitForm = () => {
+  submitForm = () => {
     const {orderSum, name, phoneNo} = this.props.formData;
     let alertTip = '';
     if(!orderSum.toString().length){
@@ -165,7 +165,7 @@ class Home extends Component {
           </div>
           <img src={this.props.formData.imgpath} className="select-img" alt=""/>
         </div>
-        <TouchableOpacity className="submit-btn" clickCallBack={this.sumitForm} text="提交" />
+        <TouchableOpacity className="submit-btn" clickCallBack={this.submitForm} text="提交" />
         <PublicAlert closeAlert={this.closeAlert} alertTip={this.state.alertTip} alertStatus={this.state.alertStatus} />
       </main>
     );
