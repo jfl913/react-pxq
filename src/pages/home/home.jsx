@@ -23,10 +23,14 @@ class Home extends Component {
     clearSelected: PropTypes.func.isRequired,
   }
 
-  state = {
-    alertStatus: false, //弹框状态
-    alertTip: '', //弹框提示文字
+  constructor(props) {
+    super(props);
+    this.state = {
+      alertStatus: false, //弹框状态
+      alertTip: '', //弹框提示文字
+    }
   }
+  
   /**
    * 已选择的商品数据
    * @type {Array}
